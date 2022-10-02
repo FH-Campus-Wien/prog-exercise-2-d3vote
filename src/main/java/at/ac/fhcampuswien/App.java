@@ -19,12 +19,17 @@ public class App {
 
         x = sc.nextInt();
         y = 1;
+        if (x < 0 && n == 2)
+        {
+            System.out.println("No number entered.");
+        }
 
         while (x > 0 && y > 0){
             System.out.print("Number " + n + ": ");
             n += 1;
             y = sc.nextInt();
             double temp = Math.max(x, y); // TEMP
+
             if (x > y){
                 x = y;
             }
@@ -32,6 +37,7 @@ public class App {
             {
                 x = temp;
             }
+
             if (y <= 0 || x <= 0)
             {
                 System.out.printf("The largest number is " + "%.2f" + "%n", temp);
@@ -41,7 +47,7 @@ public class App {
 
     //todo Task 2
     public void stairs(){
-        // input your solution here
+
     }
 
     //todo Task 3
