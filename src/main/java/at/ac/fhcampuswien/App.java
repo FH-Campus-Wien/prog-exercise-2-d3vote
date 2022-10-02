@@ -47,7 +47,29 @@ public class App {
 
     //todo Task 2
     public void stairs(){
-
+     Scanner sc = new Scanner(System.in);
+     System.out.print("n: ");
+     int max_row = sc.nextInt();
+     int row = 1;
+     int d_num = 1; // printed number
+     int r_num = 0; // number in a row
+     if (max_row > 0) // activation
+     {
+        while (row <= max_row) {
+            System.out.print(d_num + " ");
+            d_num += 1;
+            r_num += 1;
+            if (row == r_num) {
+                System.out.print(System.lineSeparator());
+                row += 1;
+                r_num = 0;
+            }
+        }
+     }
+     else // deactivate
+     {
+        System.out.println("Invalid number!");
+     }
     }
 
     //todo Task 3
