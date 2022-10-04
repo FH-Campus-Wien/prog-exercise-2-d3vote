@@ -74,7 +74,27 @@ public class App {
 
     //todo Task 3
     public void printPyramid(){
-        // input your solution here
+
+        int r = 6; // Total rows
+        int rn = 0; // Row number printed
+
+        while (rn != r){
+            int i = 1 + 2*rn; // Total stars in a row
+            int in = 0; // Printed Stars in a row
+
+            int s = r-rn-1; //Spaces needed
+            int sn = 0; //Printed space
+            while (sn < s){
+                System.out.print(" ");
+                sn+=1;
+            }
+            while (in < i){
+                System.out.print("*");
+                in += 1;
+            }
+            System.out.println("");
+            rn += 1;
+        }
     }
 
     //todo Task 4
