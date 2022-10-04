@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class App {
 
+
     //todo Task 1
 
     public void largestNumber(){
@@ -74,32 +75,19 @@ public class App {
 
     //todo Task 3
     public void printPyramid(){
-
-        int r = 6; // Total rows
-        int rn = 0; // Row number printed
-
-        while (rn != r){
-            int i = 1 + 2*rn; // Total stars in a row
-            int in = 0; // Printed Stars in a row
-
-            int s = r-rn-1; //Spaces needed
-            int sn = 0; //Printed space
-            while (sn < s){
+        for (int r = 6, rn = 0; rn != r; rn += 1){          //int r = 6 Total rows                        //int rn = 0 Row number printed
+            for (int sn=0, s = r-rn-1; sn<s; sn+=1)  {      //int sn = 0 Printed space                    //int s = r-rn-1 Total spaces needed in a row
                 System.out.print(" ");
-                sn+=1;
             }
-            while (in < i){
+            for (int i = 1 + 2*rn, in = 0; in<i; in+=1) {   //int i = 1 + 2*rn Total stars in a row       //int in = 0 Printed Stars in a row
                 System.out.print("*");
-                in += 1;
             }
             System.out.println("");
-            rn += 1;
         }
     }
 
     //todo Task 4
     public void printRhombus(){
-        // input your solution here
     }
 
     //todo Task 5
