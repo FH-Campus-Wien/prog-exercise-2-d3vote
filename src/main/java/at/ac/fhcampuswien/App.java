@@ -100,6 +100,7 @@ public class App {
         Scanner scan = new Scanner(System.in);
         int sum = 0;
         int n = 0;
+        double avg = 0;
         for(int i = 1; ; i++){
             System.out.print("Mark " + i + ": ");
             int x = scan.nextInt();
@@ -110,7 +111,11 @@ public class App {
                 }
             } else if (x == 0) {
                 i--;
-                double avg = (double) sum / (double) i;
+                if (i > 0){
+                    avg = (double) sum / (double) i;
+                } else {
+                    avg = 0;
+                }
                 System.out.printf("Average: " + "%.2f" + "%n", avg);
                 System.out.println("Negative marks: " + n);
                 break;
