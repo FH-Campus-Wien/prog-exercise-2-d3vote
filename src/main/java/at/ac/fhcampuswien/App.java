@@ -18,7 +18,7 @@ public class App {
         System.out.print("Number " + n + ": ");
         n += 1;
 
-        x = sc.nextInt();
+        x = sc.nextDouble();
         y = 1;
         if (x < 0 && n == 2)
         {
@@ -28,7 +28,7 @@ public class App {
         while (x > 0 && y > 0){
             System.out.print("Number " + n + ": ");
             n += 1;
-            y = sc.nextInt();
+            y = sc.nextDouble();
             double temp = Math.max(x, y); // TEMP
 
             if (x > y){
@@ -88,11 +88,37 @@ public class App {
 
     //todo Task 4
     public void printRhombus(){
+        Scanner scan = new Scanner(System.in);
+        System.out.print("h: ");
+        int h = scan.nextInt();
+        System.out.print("c: ");
+        char c = scan.next().charAt(0);
     }
 
     //todo Task 5
     public void marks(){
-        // input your solution here
+        Scanner scan = new Scanner(System.in);
+        int sum = 0;
+        int n = 0;
+        for(int i = 1; ; i++){
+            System.out.print("Mark " + i + ": ");
+            int x = scan.nextInt();
+            if (x >= 1 && x <= 5) {
+                sum += x;
+                if (x == 5) {
+                    n++;
+                }
+            } else if (x == 0) {
+                i--;
+                double avg = (double) sum / (double) i;
+                System.out.printf("Average: " + "%.2f" + "%n", avg);
+                System.out.println("Negative marks: " + n);
+                break;
+            } else {
+                System.out.println("Invalid mark!");
+                i--;
+            }
+        }
     }
 
     //todo Task 6
@@ -102,6 +128,9 @@ public class App {
 
     public static void main(String[] args){
         App exercise2 = new App();
+
+        System.out.println("\nTask 5: Notendurchschnitt");
+        exercise2.marks();
 
         System.out.println("Task 1: Largest Number");
         exercise2.largestNumber();
