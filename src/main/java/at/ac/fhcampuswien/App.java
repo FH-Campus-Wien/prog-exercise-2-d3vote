@@ -128,14 +128,34 @@ public class App {
 
     //todo Task 6
     public void happyNumbers(){
-        // input your solution here
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        int sum = 0;
+        for (int i = 0; x > 0; i++) {
+            int num = x % 10;
+            sum = sum + (num*num);
+            x = x/10;
+            System.out.println(sum);
+
+            if (x / 10 == 0) {
+                x = sum;
+                sum = 0;
+            } else if (x == 4 && i > 1){
+                System.out.println("Sad number!");
+                break;
+            } else if (x == 1 && i > 1) {
+                System.out.println("Happy number!");
+                break;
+            } else {
+                // System.out.println("Error");
+            }
+        }
     }
 
     public static void main(String[] args){
         App exercise2 = new App();
 
-        System.out.println("\nTask 5: Notendurchschnitt");
-        exercise2.marks();
+        exercise2.happyNumbers();
 
         System.out.println("Task 1: Largest Number");
         exercise2.largestNumber();
