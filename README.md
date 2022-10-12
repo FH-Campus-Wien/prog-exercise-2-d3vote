@@ -12,4 +12,4 @@ Good luck :four_leaf_clover:
 - [x] Task 3
 - [ ] Task 4
 - [x] Task 5
-- [ ] Task 6
+- [x] Task 6
