@@ -128,7 +128,28 @@ public class App {
 
     //todo Task 6
     public void happyNumbers(){
-        // input your solution here
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("n: ");
+        int x = sc.nextInt();
+        int sum = 0;
+
+
+        while(x != 1 && x != 4) {
+            while (x > 0) {
+                int num = x % 10;
+                sum = sum + (num*num);
+                x /= 10;
+            }
+            x = sum;
+            sum = 0;
+        }
+
+        if(x == 1) {
+            System.out.println("Happy number!");
+        } else {
+            System.out.println("Sad number!");
+        }
     }
 
     public static void main(String[] args){
