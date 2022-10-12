@@ -97,23 +97,18 @@ public class App {
 
     //todo Task 5
     public void marks(){
-        Scanner sc = new Scanner(System.in);
-
+        Scanner scan = new Scanner(System.in);
         int sum = 0;
         int n = 0;
         double avg = 0;
-
-        for(int i = 1; ; i++) {
+        for(int i = 1; ; i++){
             System.out.print("Mark " + i + ": ");
-            int x = sc.nextInt();
-
+            int x = scan.nextInt();
             if (x >= 1 && x <= 5) {
                 sum += x;
-
                 if (x == 5) {
                     n++;
                 }
-
             } else if (x == 0) {
                 i--;
                 if (i > 0){
@@ -124,7 +119,6 @@ public class App {
                 System.out.printf("Average: " + "%.2f" + "%n", avg);
                 System.out.println("Negative marks: " + n);
                 break;
-
             } else {
                 System.out.println("Invalid mark!");
                 i--;
@@ -134,30 +128,14 @@ public class App {
 
     //todo Task 6
     public void happyNumbers(){
-        Scanner scan = new Scanner(System.in);
-        System.out.print("n: ");
-        int x = scan.nextInt();
-        int sum = 0;
-
-        while(x != 1 && x != 4) {
-            while (x > 0) {
-                int num = x % 10;
-                sum = sum + (num*num);
-                x = x/10;
-            }
-            x = sum;
-            sum = 0;
-        }
-
-        if(x == 1) {
-            System.out.println("Happy number!");
-        } else {
-            System.out.println("Sad number!");
-        }
+        // input your solution here
     }
 
     public static void main(String[] args){
         App exercise2 = new App();
+
+        System.out.println("\nTask 5: Notendurchschnitt");
+        exercise2.marks();
 
         System.out.println("Task 1: Largest Number");
         exercise2.largestNumber();
